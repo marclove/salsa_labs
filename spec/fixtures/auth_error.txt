@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Server: nginx/1.0.0
+Date: Tue, 30 Jul 2013 08:32:07 GMT
+Content-Type: text/xml;charset=UTF-8
+Connection: close
+RequestURI: /api/authenticate.sjs?email=marcslove@gmail.com&password=marclove
+Set-Cookie: JSESSIONID=863F72A0F2BBAA941D2D214DEC9DBE4F-n4; Path=/; Secure; HttpOnly, hqtab_2=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT, READONLY_Short_Name=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT, SRV=sandbox; path=/
+Cache-Control: private
+Transfer-Encoding: Identity
+
+<?xml version="1.0"?>
+<data>
+  <error>Invalid login, please try again.</error>
+</data>

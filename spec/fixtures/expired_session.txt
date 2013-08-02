@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx/1.0.0
+Date: Tue, 30 Jul 2013 08:30:20 GMT
+Content-Type: text/xml;charset=UTF-8
+Connection: close
+RequestURI: /api/getObjects.sjs?object=supporter
+Set-Cookie: JSESSIONID=EEF5998FA6D5CDDC179920762A143F9E-n4; Path=/; Secure; HttpOnly, SRV=sandbox; path=/
+Cache-Control: private
+Transfer-Encoding: Identity
+
+<?xml version="1.0"?>
+<data><error exc="There was a problem with your submission.  Please authenticate in order to continue.">There was a problem with your submission.  Please authenticate in order to continue.</error></data>

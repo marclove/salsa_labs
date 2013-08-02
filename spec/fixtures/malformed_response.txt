@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx/1.0.0
+Date: Tue, 30 Jul 2013 08:30:20 GMT
+Content-Type: text/xml;charset=UTF-8
+Connection: close
+RequestURI: /api/getObjects.sjs?object=supporter
+Set-Cookie: JSESSIONID=DDC179920EEF5998FA6D5C762A143F9E-n4; Path=/; Secure; HttpOnly, SRV=sandbox; path=/
+Cache-Control: private
+Transfer-Encoding: Identity
+
+<?xml version="1.0"?>
