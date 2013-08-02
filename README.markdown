@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/marclove/salsa_labs.png)](https://codeclimate.com/github/marclove/salsa_labs)
 # SalsaLabs
 A Ruby Gem for consuming the [Salsa Labs API](http://wfc2.wiredforchange.com/o/8001/p/salsa/website/public2/commons/dev/docs/).
 
