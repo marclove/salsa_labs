@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'nokogiri'
   s.add_dependency 'faraday', '>= 0.9.0.rc'
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'yard'
+  s.add_development_dependency 'redcarpet'
   s.add_development_dependency 'bundler', '>= 1.0'
   s.add_development_dependency 'rspec', '>= 2.11'
   s.add_development_dependency 'webmock', '>= 1.13.0'
