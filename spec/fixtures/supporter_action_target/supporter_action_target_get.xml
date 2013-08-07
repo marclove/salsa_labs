@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<data organization_KEY="17270">
+  <supporter_action_target>
+    <item>
+      <supporter_action_target_KEY>640</supporter_action_target_KEY>
+      <Last_Modified>Tue Aug 10 2010 15:16:31 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Tue Aug 10 2010 15:16:31 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31540045</supporter_KEY>
+      <supporter_action_KEY>9550</supporter_action_KEY>
+      <supporter_action_content_KEY>227</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>640</key>
+      <object>supporter_action_target</object>
+    </item>
+  </supporter_action_target>
+</data>

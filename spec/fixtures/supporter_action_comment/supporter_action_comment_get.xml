@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<data organization_KEY="17270">
+  <supporter_action_comment>
+    <item>
+      <supporter_action_comment_KEY>59</supporter_action_comment_KEY>
+      <organization_KEY>17270</organization_KEY>
+      <Last_Modified>Wed Aug 11 2010 14:52:40 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Aug 11 2010 14:52:40 GMT-0400 (EDT)</Date_Created>
+      <action_KEY>425</action_KEY>
+      <Comment/>
+      <MD5>d41d8cd98f00b204e9800998ecf8427e</MD5>
+      <key>59</key>
+      <object>supporter_action_comment</object>
+    </item>
+  </supporter_action_comment>
+</data>

@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<data organization_KEY="17270">
+  <supporter_action_target>
+    <item>
+      <supporter_action_target_KEY>640</supporter_action_target_KEY>
+      <Last_Modified>Tue Aug 10 2010 15:16:31 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Tue Aug 10 2010 15:16:31 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31540045</supporter_KEY>
+      <supporter_action_KEY>9550</supporter_action_KEY>
+      <supporter_action_content_KEY>227</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>640</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>644</supporter_action_target_KEY>
+      <Last_Modified>Wed Aug 11 2010 13:53:29 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Aug 11 2010 13:53:29 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31540049</supporter_KEY>
+      <supporter_action_KEY>9560</supporter_action_KEY>
+      <supporter_action_content_KEY>227</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>644</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>645</supporter_action_target_KEY>
+      <Last_Modified>Wed Aug 11 2010 14:49:44 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Aug 11 2010 14:49:44 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31540050</supporter_KEY>
+      <supporter_action_KEY>9563</supporter_action_KEY>
+      <supporter_action_content_KEY>227</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>645</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>646</supporter_action_target_KEY>
+      <Last_Modified>Thu Aug 12 2010 18:22:13 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Thu Aug 12 2010 18:22:13 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31558797</supporter_KEY>
+      <supporter_action_KEY>9581</supporter_action_KEY>
+      <supporter_action_content_KEY>228</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>646</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>647</supporter_action_target_KEY>
+      <Last_Modified>Sat Aug 14 2010 10:04:10 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Sat Aug 14 2010 10:04:10 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31558800</supporter_KEY>
+      <supporter_action_KEY>9591</supporter_action_KEY>
+      <supporter_action_content_KEY>228</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>647</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>648</supporter_action_target_KEY>
+      <Last_Modified>Mon Aug 23 2010 15:21:28 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Mon Aug 23 2010 15:21:28 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31577650</supporter_KEY>
+      <supporter_action_KEY>9594</supporter_action_KEY>
+      <supporter_action_content_KEY>228</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>648</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>673</supporter_action_target_KEY>
+      <Last_Modified>Tue Jan 18 2011 05:13:25 GMT-0500 (EST)</Last_Modified>
+      <Date_Created>Tue Jan 18 2011 05:13:25 GMT-0500 (EST)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31685842</supporter_KEY>
+      <supporter_action_KEY>9756</supporter_action_KEY>
+      <supporter_action_content_KEY>228</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>673</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>680</supporter_action_target_KEY>
+      <Last_Modified>Wed Feb 09 2011 19:40:26 GMT-0500 (EST)</Last_Modified>
+      <Date_Created>Wed Feb 09 2011 19:40:26 GMT-0500 (EST)</Date_Created>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <supporter_KEY>31685834</supporter_KEY>
+      <supporter_action_KEY>9819</supporter_action_KEY>
+      <supporter_action_content_KEY>242</supporter_action_content_KEY>
+      <method>Phone Call</method>
+      <target_type>recipient</target_type>
+      <target_key>137214</target_key>
+      <action_result_KEY/>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>680</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>260</supporter_action_target_KEY>
+      <Last_Modified>Wed Jun 10 2009 15:50:10 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Jun 10 2009 15:50:10 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>0</organization_KEY>
+      <chapter_KEY/>
+      <action_KEY>242</action_KEY>
+      <supporter_KEY>0</supporter_KEY>
+      <supporter_action_KEY>9185</supporter_action_KEY>
+      <supporter_action_content_KEY>187</supporter_action_content_KEY>
+      <method>Email</method>
+      <target_type>recipient</target_type>
+      <target_key>137180</target_key>
+      <action_result_KEY>-1021</action_result_KEY>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>260</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>261</supporter_action_target_KEY>
+      <Last_Modified>Wed Jun 10 2009 15:50:10 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Jun 10 2009 15:50:10 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>0</organization_KEY>
+      <chapter_KEY/>
+      <action_KEY>242</action_KEY>
+      <supporter_KEY>0</supporter_KEY>
+      <supporter_action_KEY>9185</supporter_action_KEY>
+      <supporter_action_content_KEY>187</supporter_action_content_KEY>
+      <method>Email</method>
+      <target_type>recipient</target_type>
+      <target_key>137181</target_key>
+      <action_result_KEY>-1021</action_result_KEY>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>261</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>262</supporter_action_target_KEY>
+      <Last_Modified>Wed Jun 10 2009 15:52:17 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Jun 10 2009 15:52:17 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>0</organization_KEY>
+      <chapter_KEY/>
+      <action_KEY>242</action_KEY>
+      <supporter_KEY>0</supporter_KEY>
+      <supporter_action_KEY>9186</supporter_action_KEY>
+      <supporter_action_content_KEY>188</supporter_action_content_KEY>
+      <method>Email</method>
+      <target_type>recipient</target_type>
+      <target_key>137180</target_key>
+      <action_result_KEY>-1021</action_result_KEY>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>262</key>
+      <object>supporter_action_target</object>
+    </item>
+    <item>
+      <supporter_action_target_KEY>263</supporter_action_target_KEY>
+      <Last_Modified>Wed Jun 10 2009 15:52:17 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Wed Jun 10 2009 15:52:17 GMT-0400 (EDT)</Date_Created>
+      <organization_KEY>0</organization_KEY>
+      <chapter_KEY/>
+      <action_KEY>242</action_KEY>
+      <supporter_KEY>0</supporter_KEY>
+      <supporter_action_KEY>9186</supporter_action_KEY>
+      <supporter_action_content_KEY>188</supporter_action_content_KEY>
+      <method>Email</method>
+      <target_type>recipient</target_type>
+      <target_key>137181</target_key>
+      <action_result_KEY>-1021</action_result_KEY>
+      <resend_now_BOOLVALUE>false</resend_now_BOOLVALUE>
+      <resend_now>false</resend_now>
+      <key>263</key>
+      <object>supporter_action_target</object>
+    </item>
+    <count>12</count>
+  </supporter_action_target>
+</data>

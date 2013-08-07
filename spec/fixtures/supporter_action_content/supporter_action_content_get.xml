@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<data organization_KEY="17270">
+  <supporter_action_content>
+    <item>
+      <supporter_action_content_KEY>227</supporter_action_content_KEY>
+      <organization_KEY>17270</organization_KEY>
+      <chapter_KEY>0</chapter_KEY>
+      <action_KEY>425</action_KEY>
+      <Last_Modified>Tue Aug 10 2010 15:16:31 GMT-0400 (EDT)</Last_Modified>
+      <Date_Created>Tue Aug 10 2010 15:16:31 GMT-0400 (EDT)</Date_Created>
+      <Letter_Subject>Primary Content</Letter_Subject>
+      <Letter_Content>when you are connected to your legislator, make the following points:
+
+* As a progressive person and constituent, please support the upcoming bill to save the world</Letter_Content>
+      <Letter_MD5>ba23f219085ad1353d23649e3ecd0a51</Letter_MD5>
+      <key>227</key>
+      <object>supporter_action_content</object>
+    </item>
+  </supporter_action_content>
+</data>
