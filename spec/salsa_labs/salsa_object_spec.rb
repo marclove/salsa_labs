@@ -6,6 +6,6 @@ describe SalsaLabs::SalsaObject do
   end
   
   it 'knows its object name' do
-    expect(Klass.object_name).to eq('klass')
+    expect(Klass.send(:object_name)).to eq('klass')
   end
 end

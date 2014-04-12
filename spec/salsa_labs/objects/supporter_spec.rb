@@ -5,10 +5,6 @@ describe SalsaLabs::Supporter do
     File.new(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', path)).read
   end
   
-  describe '#object_name' do
-    specify { expect(SalsaLabs::Supporter.object_name).to eq('supporter') }
-  end
-  
   context 'request methods' do
     before do
       expect(SalsaLabs).to receive(:request).with(path, params).and_yield(response)
