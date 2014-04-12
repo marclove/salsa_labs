@@ -21,13 +21,14 @@ describe SalsaLabs do
       connection = double('Connection')
       response = double('response')
       path = '/'
+      query = {}
       body = 'here is the body'
 
       expect(response).to receive(:body).and_return(body)
-      expect(connection).to receive(:request).with(path).and_yield(response)
+      expect(connection).to receive(:request).with(path, query).and_yield(response)
       SalsaLabs.stub(:connection){ connection }
 
-      SalsaLabs.request(path) do |resp|
+      SalsaLabs.request(path, query) do |resp|
         expect(resp.body).to eq(body)
       end
     end
