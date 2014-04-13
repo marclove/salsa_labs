@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary = 'Salsa Labs API client library'
   s.licenses = ['MIT']
   s.required_rubygems_version = '>= 1.3.6'
-  s.add_dependency 'activesupport'
+  s.add_dependency 'activesupport', '4.0.4'
   s.add_dependency 'nokogiri'
   s.add_dependency 'faraday', '>= 0.9.0.rc'
   s.add_development_dependency 'rake'
