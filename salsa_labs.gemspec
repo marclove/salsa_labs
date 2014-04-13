@@ -4,7 +4,7 @@ $:.unshift lib unless $:.include?(lib)
 require 'salsa_labs/version'
 
 Gem::Specification.new do |s|
-  s.name = 'salsa_labs'
+  s.name = 'salsalabs'
   s.version = SalsaLabs::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ['Marc Love']

@@ -10,17 +10,17 @@ require 'salsa_labs/version'
 
 task :gem => :build
 task :build do
-  system 'gem build salsa_labs.gemspec'
+  system 'gem build salsalabs.gemspec'
 end
 
 task :install => :build do
-  system "gem install salsa_labs-#{SalsaLabs::VERSION}.gem"
+  system "gem install salsalabs-#{SalsaLabs::VERSION}.gem"
 end
 
 task :release => :build do
   system "git tag -a v#{SalsaLabs::VERSION} -m 'Tagging #{SalsaLabs::VERSION}"
   system "git push --tags"
-  system "gem push salsa_labs-#{SalsaLabs::VERSION}.gem"
+  system "gem push salsalabs-#{SalsaLabs::VERSION}.gem"
 end
 
 RSpec::Core::RakeTask.new(:spec) do |t|
