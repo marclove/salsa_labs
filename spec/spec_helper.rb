@@ -8,6 +8,8 @@ require 'rspec'
 require 'webmock/rspec'
 require 'fixtures'
 
+silence_warnings { require 'pry-debugger' }
+
 RSpec.configure do |config|
   config.order = :rand
 
