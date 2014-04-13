@@ -1,5 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/marclove/salsa_labs.png)](https://codeclimate.com/github/marclove/salsa_labs)
-[![Build Status](https://travis-ci.org/marclove/salsa_labs.svg?branch=master)](https://travis-ci.org/marclove/salsa_labs)
+[![Build Status](https://travis-ci.org/marclove/salsalabs.svg?branch=master)](https://travis-ci.org/marclove/salsalabs)
 
 # SalsaLabs
 A Ruby Gem for consuming the [Salsa Labs API](http://wfc2.wiredforchange.com/o/8001/p/salsa/website/public2/commons/dev/docs/).
