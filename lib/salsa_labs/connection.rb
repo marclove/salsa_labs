@@ -70,20 +70,18 @@ module SalsaLabs
       auth_path = "authenticate.sjs?email=#{email}&password=#{password}"
       response = AuthenticationResponse.new(api.get(auth_path))
       if response.successful?
-        @authentication_headers = response.session_cookies
+        @authentication_headers = { 'Cookie' => response.session_cookies }
       else
+        @authentication_headers = nil
         raise AuthenticationError, response.error_message
       end
     end
 
-    # When {#authenticate} is called, and a successful response is received,
-    # the returned session cookie is saved in an instance variable and
-    # submitted with each subsequent API request. Returns +true+ if the
-    # session cookie has been set.
+    # Returns +true+ if the session cookie has been set.
     #
     # @return [Boolean]
     def authenticated?
-      @authentication_headers.has_key?('JSESSIONID')
+      !!@authentication_headers
     end
   end
 end

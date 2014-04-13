@@ -8,20 +8,14 @@ module SalsaLabs
       @response = faraday_response
     end
 
-    # @return [Hash]
+    # @return [String]
     def session_cookies
-      if successful?
-        cookies = @response.headers['set-cookie'].split(/;\s*/)
-        cookie = cookies.find{ |s| s =~ /JSESSION/ }.split('=')
-        Hash[*cookie] if cookie
-      else
-        Hash[]
-      end
+      returned_cookies if successful?
     end
 
     # @return [Boolean] true if no error message was returned
     def successful?
-      !error_message
+      !error_message && session_cookie_exists?
     end
 
     # @return [Nokogiri::XML] the full xml returned by the API,
@@ -35,6 +29,16 @@ module SalsaLabs
     def error_message
       err = body.xpath('//data/error').text
       err == '' ? nil : err
+    end
+
+    private
+
+    def session_cookie_exists?
+      returned_cookies =~ /JSESSION/
+    end
+
+    def returned_cookies
+      @response.headers['set-cookie']
     end
   end
 end

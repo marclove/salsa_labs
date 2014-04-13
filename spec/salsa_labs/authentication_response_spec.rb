@@ -22,7 +22,7 @@ describe SalsaLabs::AuthenticationResponse do
     end
     
     it "has a session cookie" do
-      expect(@response.session_cookies).to eq({'JSESSIONID' => 'A1737DC1330748B01456B3C269162AB6-n3'})
+      expect(@response.session_cookies).to eq('JSESSIONID=A1737DC1330748B01456B3C269162AB6-n3; Path=/; Secure; HttpOnly, hqtab_2=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT, READONLY_Short_Name=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT, SRV=sandbox; path=/')
     end
     
     it "has no error" do
@@ -43,7 +43,7 @@ describe SalsaLabs::AuthenticationResponse do
     end
     
     it "has no session cookie" do
-      expect(@response.session_cookies).to eq({})
+      expect(@response.session_cookies).to be_nil
     end
     
     it "has the response's headers" do

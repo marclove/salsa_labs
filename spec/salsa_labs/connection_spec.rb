@@ -6,7 +6,7 @@ describe SalsaLabs::Connection do
   let(:connection){ SalsaLabs::Connection.new(email,password) }
   
   # Response Object Doubles
-  let(:auth_response){ double('AuthenticationResponse', :successful? => true, :session_cookies => {'JSESSIONID' => 'sessionid'}) }
+  let(:auth_response){ double('AuthenticationResponse', :successful? => true, :session_cookies => 'JSESSIONID=sessionid') }
   let(:failed_auth_response){ double('AuthenticationResponse', :successful? => false, :error_message => 'failed auth') }
   let(:api_response){ double('ApiResponse', :successful? => true, :data => 'result') }
   let(:expired_api_response){ double('ApiResponse', :successful? => false, :needs_reauthentication? => true) }
