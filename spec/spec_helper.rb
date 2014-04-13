@@ -12,4 +12,17 @@ RSpec.configure do |config|
   config.order = :rand
 
   config.include(Fixtures)
+
+  config.around :each, type: :integration do |example|
+    WebMock.disable!
+
+    SalsaLabs.configure do |c|
+      c.email    = ENV['SALSA_USERNAME']
+      c.password = ENV['SALSA_PASSWORD']
+    end
+
+    example.run
+
+    WebMock.enable!
+  end
 end

@@ -1,4 +1,9 @@
 language: ruby
-
 rvm:
   - 1.9.3
+env:
+  global:
+    - secure: PEgtKoeN3s+ovOFmPfLrYXgY3N1S1UFYuFvSVwXRsjNJtYv0+gHBLRMGBregMbcx6fyfiuR6nUykJHVzhBXncvRXjJe/ClTuWJCubvEEAiFg1IU1Z/692KS79EPTKhJoWW/Pqp6lmUN9Xpf/LtngciiFAoF3qHyGXgxU/NOKZwI=
+    - secure: m9PNJdttvjaOzgp7LYrLGwhNuO0kDtaV/Md0EFMwsckCqPZq3549hs4JLH2RZV+oKyKO7nuWBCu670txrskFxPWa4grF/H6q1eUoFcuqgk0iR179mfO20cXU3jTfGzmPseFlpMpSM65dNtH4bdx53tsflfSnG0fCKQJ1FpY1ZsU=
+script:
+  - bundle exec rake spec:ci

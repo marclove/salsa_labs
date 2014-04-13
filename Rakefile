@@ -29,6 +29,14 @@ namespace :spec do
     t.pattern = './spec/unit{,/*/**}/*_spec.rb'
     t.ruby_opts = "-w -I ./spec -rspec_helper"
   end
+
+  RSpec::Core::RakeTask.new(:integration) do |t|
+    t.verbose = false
+    t.pattern = './spec/integration{,/*/**}/*_spec.rb'
+    t.ruby_opts = "-w -I ./spec -rspec_helper"
+  end
+
+  task :ci => ['spec:unit','spec:integration']
 end
 
 task :spec => ['spec:unit']
