@@ -5,8 +5,8 @@ describe SalsaLabs::AuthenticationResponse do
   let(:password){ 'password' }
 
   # API Response Bodies
-  let(:auth_success) { File.new(File.join(File.dirname(__FILE__),'..','fixtures','auth_success.txt')) }
-  let(:auth_failure) { File.new(File.join(File.dirname(__FILE__),'..','fixtures','auth_error.txt')) }
+  let(:auth_success) { fixture_file 'auth_success.txt' }
+  let(:auth_failure) { fixture_file 'auth_error.txt' }
   let(:api) { Faraday.new(url: 'https://sandbox.salsalabs.com/api') }
 
   describe 'successful authentication' do

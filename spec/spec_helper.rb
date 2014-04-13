@@ -1,11 +1,15 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__),'..','lib'))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'support'))
 
 require 'bundler/setup'
 require 'salsa_labs'
 require 'rspec'
 require 'webmock/rspec'
+require 'fixtures'
 
 RSpec.configure do |config|
   config.order = :rand
+
+  config.include(Fixtures)
 end

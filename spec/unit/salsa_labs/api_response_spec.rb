@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe SalsaLabs::ApiResponse do
   # API Response Bodies
-  let(:api_success) { File.new(File.join(File.dirname(__FILE__),'..','fixtures','supporters.txt'))}
-  let(:expired_session) { File.new(File.join(File.dirname(__FILE__),'..','fixtures','expired_session.txt')) }
-  let(:malformed_response) { File.new(File.join(File.dirname(__FILE__),'..','fixtures','malformed_response.txt')) }
+  let(:api_success) { fixture_file 'supporters.txt' }
+  let(:expired_session) { fixture_file 'expired_session.txt' }
+  let(:malformed_response) { fixture_file 'malformed_response.txt' }
   let(:api) { Faraday.new(url: 'https://sandbox.salsalabs.com/api') }
 
   describe 'successful request' do

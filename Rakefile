@@ -23,11 +23,15 @@ task :release => :build do
   system "gem push salsalabs-#{SalsaLabs::VERSION}.gem"
 end
 
-RSpec::Core::RakeTask.new(:spec) do |t|
-  t.verbose = false
-  t.pattern = './spec{,/*/**}/*_spec.rb'
-  t.ruby_opts = "-w -I ./spec -rspec_helper"
+namespace :spec do
+  RSpec::Core::RakeTask.new(:unit) do |t|
+    t.verbose = false
+    t.pattern = './spec/unit{,/*/**}/*_spec.rb'
+    t.ruby_opts = "-w -I ./spec -rspec_helper"
+  end
 end
+
+task :spec => ['spec:unit']
 
 YARD::Rake::YardocTask.new(:doc) do |t|
   t.files = ['lib/**/*.rb']
