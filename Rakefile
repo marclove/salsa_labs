@@ -18,7 +18,7 @@ task :install => :build do
 end
 
 task :release => :build do
-  system "git tag -a v#{SalsaLabs::VERSION} -m 'Tagging #{SalsaLabs::VERSION}"
+  system "git tag -a v#{SalsaLabs::VERSION} -m \"Tagging #{SalsaLabs::VERSION}\""
   system "git push --tags"
   system "gem push salsalabs-#{SalsaLabs::VERSION}.gem"
 end
