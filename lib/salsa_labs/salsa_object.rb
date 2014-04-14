@@ -10,7 +10,7 @@ module SalsaLabs
       # @param [String] key of the object being requested
       # @return [Hash] a hash representing the requested object
       def get(key)
-        SalsaLabs.request('getObject.sjs', {object: object_name, key: key}) do |response|
+        SalsaLabs.request('api/getObject.sjs', {object: object_name, key: key}) do |response|
           Hash.from_xml(response).
                try(:[], object_name).
                try(:[], 'item')
@@ -19,7 +19,7 @@ module SalsaLabs
 
       # @return [Integer] the number of total objects
       def count
-        SalsaLabs.request('getCounts.sjs', {object: object_name}) do |response|
+        SalsaLabs.request('api/getCounts.sjs', {object: object_name}) do |response|
           Hash.from_xml(response).
                try(:[], object_name).
                try(:[], 'count').
@@ -30,10 +30,30 @@ module SalsaLabs
 
       # @return [Array<Hash>] an array of all the objects
       def all
-        SalsaLabs.request('getObjects.sjs', {object: object_name}) do |response|
+        SalsaLabs.request('api/getObjects.sjs', {object: object_name}) do |response|
           Hash.from_xml(response).
                try(:[], object_name).
                try(:[], 'item')
+        end
+      end
+
+      # @return [String] the newly created object's key
+      # @raise [APIResponseError]
+      #   if the request to create the object failed
+      def create(attributes)
+        attributes.merge!({ object: object_name, key: '0' })
+        SalsaLabs.request('save', attributes) do |response|
+          SalsaLabs::SaveResponse.new(response).key
+        end
+      end
+
+      # @return [Boolean] true if request was successful
+      # @raise [APIResponseError]
+      #   if the request to update the object failed
+      def update(key, attributes)
+        attributes.merge!({ object: object_name, key: key.to_s })
+        SalsaLabs.request('save', attributes) do |response|
+          SalsaLabs::SaveResponse.new(response).successful?
         end
       end
 

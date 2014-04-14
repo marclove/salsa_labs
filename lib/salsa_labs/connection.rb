@@ -1,6 +1,7 @@
 require 'net/http'
 require 'cgi'
 require 'faraday'
+require 'salsa_labs/salsa_request_overwrite'
 
 module SalsaLabs
   class APIResponseError < StandardError; end
@@ -15,11 +16,11 @@ module SalsaLabs
     #   from your Salsa Labs login
     def initialize(email, password)
       @email, @password = email, password
-      @authentication_headers = {}
+      @authentication_headers = nil
     end
 
     # @param [String] path
-    #   the url fragment that follows "+sandbox.salsalabs.com/api/+"
+    #   the url fragment that follows "+sandbox.salsalabs.com/+"
     #   in the endpoint uri you are making a request to
     # @param [Hash] query
     #   a hash representing the url query string parameters
@@ -53,7 +54,10 @@ module SalsaLabs
 
     # @return [Faraday]
     def api
-      @api ||= ::Faraday.new(url: 'https://sandbox.salsalabs.com/api')
+      @api ||= ::Faraday.new url: 'https://sandbox.salsalabs.com/' do |conn|
+        conn.use :salsa
+        conn.adapter :net_http
+      end
     end
 
     # @yieldparam [ApiResponse] response
@@ -67,7 +71,7 @@ module SalsaLabs
     # @raise [AuthenticationError] if the response returned an error or is malformed
     def authenticate
       email, password = CGI.escape(@email), CGI.escape(@password)
-      auth_path = "authenticate.sjs?email=#{email}&password=#{password}"
+      auth_path = "api/authenticate.sjs?email=#{email}&password=#{password}"
       response = AuthenticationResponse.new(api.get(auth_path))
       if response.successful?
         @authentication_headers = { 'Cookie' => response.session_cookies }

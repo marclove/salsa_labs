@@ -27,7 +27,7 @@ describe SalsaLabs::Connection do
     it 'makes an authentication request first, then processes the request' do
       expect(SalsaLabs::AuthenticationResponse).to receive(:new).and_return(auth_response)
       expect(SalsaLabs::ApiResponse).to receive(:new).and_return(api_response)
-      connection.request('getObjects.sjs', {object: 'supporter'}) do |response|
+      connection.request('api/getObjects.sjs', {object: 'supporter'}) do |response|
         expect(response).to eq('result')
       end
       expect(@auth_request).to have_been_requested
@@ -42,7 +42,7 @@ describe SalsaLabs::Connection do
 
     it 'processes the request' do
       expect(SalsaLabs::ApiResponse).to receive(:new).and_return(api_response)
-      connection.request('getObjects.sjs', {object: 'supporter'}) do |response|
+      connection.request('api/getObjects.sjs', {object: 'supporter'}) do |response|
         expect(response).to eq('result')
       end
       expect(@auth_request).to_not have_been_requested
@@ -58,7 +58,7 @@ describe SalsaLabs::Connection do
     it 'handles the request error, authenticates, and then processes the request' do
       expect(SalsaLabs::ApiResponse).to receive(:new).and_return(expired_api_response, api_response)
       expect(SalsaLabs::AuthenticationResponse).to receive(:new).and_return(auth_response)
-      connection.request('getObjects.sjs', {object: 'supporter'}) do |response|
+      connection.request('api/getObjects.sjs', {object: 'supporter'}) do |response|
         expect(response).to eq('result')
       end
       expect(@auth_request).to have_been_requested
@@ -68,7 +68,7 @@ describe SalsaLabs::Connection do
     it 'breaks an infinite reauthentication loop caused by an API response that is never valid' do
       expect(SalsaLabs::ApiResponse).to receive(:new).and_return(expired_api_response).twice
       expect(SalsaLabs::AuthenticationResponse).to receive(:new).and_return(auth_response)
-      expect{ connection.request('getObjects.sjs', {object: 'supporter'}) }.to raise_error(SalsaLabs::AuthenticationLoopError)
+      expect{ connection.request('api/getObjects.sjs', {object: 'supporter'}) }.to raise_error(SalsaLabs::AuthenticationLoopError)
       expect(@auth_request).to have_been_requested
       expect(@api_request).to have_been_requested.twice
     end
@@ -76,7 +76,7 @@ describe SalsaLabs::Connection do
     it 'breaks an infinite reauthentication loop caused by an authentication response that is never valid' do
       expect(SalsaLabs::ApiResponse).to receive(:new).and_return(expired_api_response)
       expect(SalsaLabs::AuthenticationResponse).to receive(:new).and_return(failed_auth_response)
-      expect{ connection.request('getObjects.sjs', {object: 'supporter'}) }.to raise_error(SalsaLabs::AuthenticationError)
+      expect{ connection.request('api/getObjects.sjs', {object: 'supporter'}) }.to raise_error(SalsaLabs::AuthenticationError)
       expect(@auth_request).to have_been_requested
       expect(@api_request).to have_been_requested
     end
