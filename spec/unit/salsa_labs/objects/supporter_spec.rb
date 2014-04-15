@@ -41,22 +41,13 @@ describe SalsaLabs::Supporter do
       specify { expect(SalsaLabs::Supporter.count).to eq(expected) }
     end
 
-    describe '#create' do
+    describe '#save' do
       let(:path){ 'save' }
-      let(:params){ { :object => 'supporter', :key => '0', :Phone => '4159876543' } }
-      let(:response){ fixture_file 'supporter/supporter_create.xml' }
+      let(:params){ { :object => 'supporter', :Phone => '4159876543' } }
+      let(:response){ fixture_file 'supporter/supporter_save.xml' }
       let(:expected){ '12345678' }
 
-      specify { expect(SalsaLabs::Supporter.create(:Phone => '4159876543')).to eq(expected) }
-    end
-
-    describe '#update' do
-      let(:path){ 'save' }
-      let(:params){ { :object => 'supporter', :key => '12345678', :Phone => '4159876543' } }
-      let(:response){ fixture_file 'supporter/supporter_update.xml' }
-      let(:expected){ true }
-
-      specify { expect(SalsaLabs::Supporter.update('12345678', :Phone => '4159876543')).to eq(expected) }
+      specify { expect(SalsaLabs::Supporter.save(:Phone => '4159876543')).to eq(expected) }
     end
   end
 end

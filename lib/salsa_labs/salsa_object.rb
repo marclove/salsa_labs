@@ -37,23 +37,13 @@ module SalsaLabs
         end
       end
 
-      # @return [String] the newly created object's key
+      # @return [String] the created or modified object's key
       # @raise [APIResponseError]
-      #   if the request to create the object failed
-      def create(attributes)
-        attributes.merge!({ object: object_name, key: '0' })
+      #   if the request to save the object failed
+      def save(attributes)
+        attributes.merge!({ object: object_name })
         SalsaLabs.request('save', attributes) do |response|
           SalsaLabs::SaveResponse.new(response).key
-        end
-      end
-
-      # @return [Boolean] true if request was successful
-      # @raise [APIResponseError]
-      #   if the request to update the object failed
-      def update(key, attributes)
-        attributes.merge!({ object: object_name, key: key.to_s })
-        SalsaLabs.request('save', attributes) do |response|
-          SalsaLabs::SaveResponse.new(response).successful?
         end
       end
 
