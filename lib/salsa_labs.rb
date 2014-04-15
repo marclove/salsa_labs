@@ -70,6 +70,7 @@ module SalsaLabs
   # @raise [ConfigurationError] if the gem has not been configured properly
   def self.establish_connection
     raise ConfigurationError.new unless configuration.valid?
-    Connection.new(configuration.email, configuration.password)
+    Connection.new(configuration.email, configuration.password,
+      configuration.endpoint_uri)
   end
 end

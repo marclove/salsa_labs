@@ -14,8 +14,8 @@ module SalsaLabs
     #   from your Salsa Labs login
     # @param [String] password
     #   from your Salsa Labs login
-    def initialize(email, password)
-      @email, @password = email, password
+    def initialize(email, password, endpoint_uri)
+      @email, @password, @endpoint_uri = email, password, endpoint_uri
       @authentication_headers = nil
     end
 
@@ -54,7 +54,7 @@ module SalsaLabs
 
     # @return [Faraday]
     def api
-      @api ||= ::Faraday.new url: 'https://sandbox.salsalabs.com/' do |conn|
+      @api ||= ::Faraday.new url: @endpoint_uri do |conn|
         conn.use :salsa
         conn.adapter :net_http
       end
