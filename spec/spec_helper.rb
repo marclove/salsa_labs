@@ -6,7 +6,8 @@ require 'bundler/setup'
 require 'salsa_labs'
 require 'rspec'
 require 'webmock/rspec'
-require 'fixtures'
+require 'support/fixtures'
+require 'support/silence_warnings'
 
 silence_warnings { require 'pry-debugger' }
 
