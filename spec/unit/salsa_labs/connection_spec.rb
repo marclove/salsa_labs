@@ -3,7 +3,8 @@ require 'spec_helper'
 describe SalsaLabs::Connection do
   let(:email){ 'jane@doe.com' }
   let(:password){ 'password' }
-  let(:connection){ SalsaLabs::Connection.new(email,password) }
+  let(:endpoint_uri) { 'https://sandbox.salsalabs.com'}
+  let(:connection){ SalsaLabs::Connection.new(email,password, endpoint_uri) }
   
   # Response Object Doubles
   let(:auth_response){ double('AuthenticationResponse', :successful? => true, :session_cookies => 'JSESSIONID=sessionid') }
