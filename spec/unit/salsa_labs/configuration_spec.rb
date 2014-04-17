@@ -28,6 +28,7 @@ describe SalsaLabs::Configuration do
   it 'is valid if email and password are set' do
     config.email = 'jane@doe.com'
     config.password = 'password'
+    config.endpoint_uri = 'https://sandbox.salsalabs.com'
     expect(config.valid?).to be_true
   end
 end
