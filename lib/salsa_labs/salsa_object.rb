@@ -14,8 +14,8 @@ module SalsaLabs
       def get(key)
         SalsaLabs.request('api/getObject.sjs', {object: object_name, key: key}) do |response|
           Hash.from_xml(response).
-               try(:[], object_name).
-               try(:[], 'item')
+              try(:[], object_name).
+              try(:[], 'item')
         end
       end
 
@@ -23,10 +23,10 @@ module SalsaLabs
       def count
         SalsaLabs.request('api/getCounts.sjs', {object: object_name}) do |response|
           Hash.from_xml(response).
-               try(:[], object_name).
-               try(:[], 'count').
-               try(:[], 'count').
-               try(:to_i)
+              try(:[], object_name).
+              try(:[], 'count').
+              try(:[], 'count').
+              try(:to_i)
         end
       end
 
@@ -34,16 +34,32 @@ module SalsaLabs
       def all
         SalsaLabs.request('api/getObjects.sjs', {object: object_name}) do |response|
           Hash.from_xml(response).
-               try(:[], object_name).
-               try(:[], 'item')
+              try(:[], object_name).
+              try(:[], 'item')
         end
+      end
+
+      def query(query)
+        uri="api/getObjects.sjs?" + query
+        fresponse=nil
+        h=nil
+
+        SalsaLabs.request(uri, {object: object_name}) do |response|
+                fresponse = response
+                 h=Hash.from_xml(response).
+                     try(:[], object_name).
+                     try(:[], 'item')
+        end
+
+        fresponse
+        h
       end
 
       # @return [String] the created or modified object's key
       # @raise [APIResponseError]
       #   if the request to save the object failed
       def save(attributes)
-        attributes.merge!({ object: object_name })
+        attributes.merge!({object: object_name})
         SalsaLabs.request('save', attributes) do |response|
           SalsaLabs::SaveResponse.new(response).key
         end
