@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
   s.add_dependency 'activesupport', '>= 2.0.0'
   s.add_dependency 'nokogiri'
-  s.add_dependency 'faraday', '>= 0.9.0.rc'
+  s.add_dependency 'faraday', '~> 0.8.7'
   s.add_dependency 'psych', '>= 2.0.5'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'yard'

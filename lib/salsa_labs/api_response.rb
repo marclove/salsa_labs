@@ -9,7 +9,7 @@ module SalsaLabs
     # @return [Boolean] true if response was properly formed and
     #   no error message was returned
     def successful?
-      data && !error_message
+      (data && !error_message) || other_valid_status?
     end
 
     # @return [Boolean] true if an error message is returned that
@@ -50,6 +50,12 @@ module SalsaLabs
     def error
       err = body.xpath('//data/error').text
       err == '' ? nil : err
+    end
+
+    # @return [Boolean] whether or not the status code was 303,
+    #   which is an indicator of a successful delete, weirdly.
+    def other_valid_status?
+      %w(303).include? @response.status.to_s
     end
   end
 end
