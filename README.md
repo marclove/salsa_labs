@@ -30,4 +30,10 @@ SalsaLabs::Supporter.get('12345')
 
 SalsaLabs::Supporter.all
   #=> [{ "supporter_KEY" => "12345", "First_Name" => "Jane", "Last_Name" => "Doe", ... }, { "supporter_KEY" => "12346", "First_Name" => "John", "Last_Name" => "Doe", ... }]
+  
+SalsaLabs::Supporter.where({ Email: 'you@example.com' })
+  #=> [{ "supporter_KEY => "12345", "First_Name" => "Jane", "Email" => "you@example.com", ... }]
+
+SalsaLabs::Supporter.delete('12345')
+  #=> true
 ```
