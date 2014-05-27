@@ -31,7 +31,7 @@ module SalsaLabs
       end
 
       # @return [Array<Hash>] an array of all the objects
-      def all(attributes)
+      def all(attributes={})
         attributes.merge!({ object: object_name })
         SalsaLabs.request('api/getObjects.sjs', attributes) do |response|
           Hash.from_xml(response).

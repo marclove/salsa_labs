@@ -28,7 +28,7 @@ module SalsaLabs
     # @return [String] the error message returned by the API
     # @return [nil] if there was no error message returned by the API
     def error_message
-      if data.nil?
+      if data.nil? && !other_valid_status?
         'The response was not formatted as expected.'
       elsif error
         error

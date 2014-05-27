@@ -1,0 +1,12 @@
+HTTP/1.1 303 See Other
+Server: nginx/1.0.0
+Date: Fri, 26 Jul 2013 06:40:59 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Set-Cookie: JSESSIONID=A1737DC1330748B01456B3C269162AB6-n3; Path=/; Secure; HttpOnly
+RequestURI: /api/authenticate.sjs?email=jane@doe.com&password=password
+Set-Cookie: hqtab_2=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT
+Set-Cookie: READONLY_Short_Name=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT
+Set-Cookie: SRV=sandbox; path=/
+Location: /api/getObjects.sjs?object=supporters&condition=supporter_KEY%3D1234
