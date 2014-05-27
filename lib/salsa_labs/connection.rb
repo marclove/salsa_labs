@@ -14,8 +14,9 @@ module SalsaLabs
     #   from your Salsa Labs login
     # @param [String] password
     #   from your Salsa Labs login
-    def initialize(email, password)
+    def initialize(email, password, options={})
       @email, @password = email, password
+      @subdomain = options[:subdomain] || 'sandbox'
       @authentication_headers = nil
     end
 
@@ -54,7 +55,8 @@ module SalsaLabs
 
     # @return [Faraday]
     def api
-      @api ||= ::Faraday.new url: 'https://sandbox.salsalabs.com/' do |conn|
+      subdomain = CGI.escape(@subdomain)
+      @api ||= ::Faraday.new url: "https://#{subdomain}.salsalabs.com/" do |conn|
         conn.use :salsa
         conn.adapter :net_http
       end
